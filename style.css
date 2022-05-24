@@ -122,6 +122,7 @@ h2 {
     width: calc(100% - 180px);
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /* About Me Section Styling */
@@ -140,61 +141,61 @@ h2 {
 }
 
 /* Portfolio Section Styling */
-.gridContainer {
-    cursor: pointer;
-    margin: 10px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: calc(50% - 20px) calc(50% - 20px);
-    grid-auto-rows: 150px;
-    grid-gap: 20px;
-    justify-content: center;
-}
-
-.gridItem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    font-weight: bolder;
+.portfolioItem {
+    height: 150px;
+    width: calc(42.5% - 20px);
     border: 10px var(--secondaryColor) solid;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--defaultHeadingFont);
+    color: var(--defaultTextColor);
+}
+
+.portfolio h3 {
+    background: var(--secondaryColor);
+    padding: 1.5%;
+    margin: 4%;
+    border-radius: 15px;
+    text-decoration: none;
     transition: 0.5s;
-    background-color: var(--secondaryColor);
 }
-
-.gridItem h3 {
-    transition: 0.5s;
-    height: 25px;
-    padding: 20px;
-    display: inline;
-    border-radius: 10px;
-    background-color: var(--secondaryColor);
-}
-
-.gridItem1 {
-    grid-column: span 3;
-    grid-row: span 2;
-    background-image: url(RHCPlogo.png);
-    background-color: var(--primaryColor);
-    background-position: center;
-}
-
 
 .portfolio a {
     text-decoration: none;
-    border: none;
-    color: var(--defaultTextColor);
-    text-decoration: none;
-    transition: 0.8s;
-    padding: none;
+    transition: 0.5s;
 }
 
-.gridItem:hover {
-    border-color: var(--highlightColor);
+.portfolioItem1 {
+    width: calc(85% + 40px);
+    height: 300px;
+    background-image: url(https://lh3.googleusercontent.com/XgDyNEiwOaIJh9t18QI9kqoEb8ik8yKbagSwLPdIdS1Lj7NZYC3bukR3mADFp3EE2RvYQuzAR9aRzyRoKdIvbtxNCC_-dULBTnMIq4rjrG3JH5WtgV4m8zjIo6IV0h-OmtRVI8YlfC1_b8qNTHH0AHKxHr7x_TghK-qFPXf32i8_EfKeBtAqZ_NoQIsTSDe9oiYXjtUOcQUxQUwK4CXT1jSDSHhQmUga3l_WRXmiU1bnBHX4fE4li5b9Pyg4todcR6045FJOjal5krHnK5RXRo0ZGa1B8aUNU8RhRExx4-7gtYr3Imf_5wNoSF_kVvvQ7JSDLvFWmmn336VwlTp78JT-RF5zcRmixkpqdo7ngj8py6jvaNLfmvPcC3R8VvEavTBjwXx_pwwiQsm7ZDhNwyIk_SXlrlhcw1Poz8FuvgwbKD8QJ6dAGJElsF8tjGq82wxJy-c5qmF-R2Y9ELUF9CO-B7Qq9N2uMuRS8Cd0RCo-aBooIhjKVTLTpw2YrLgRNfo7iOzuDyWs-jkovUQBj-nU82mF6uwZcGPgHh7XK9TZJMZQ5ctJSCjzC-7w59Jj8y4uHnoWvR6Mw1HsxE4tAZuKA-uSXym3lAucwUXqDDissyljiIuoih5_Wwz6URThjZ1fJu-Z71-Ic3gbyvC-jvc1BcyoJDOAynmZ2uQo8AJtfUF7GycNAvJl_HLrVyGKtcQ--05QR68spm01W-dcnQ__G8b1f5bVrq2htan1JxBINw_GxN1enk9s8w=w751-h1001-no?authuser=0);
+    background-position: center;
 }
 
-.gridItem:hover h3{
-    background-color: var(--highlightColor);
+.portfolioItem2 {
+    background-image: url(javascript-logo.png);
+    background-size: 70px;
+
+}
+
+.placeHolder {
+    background-image: url(HTML-CSS-JS.png);
+    background-size: 34%;
+    background-position: center;
+}
+
+.portfolioItem3 {
+    background-image: url(RHCPlogo.png);
+}
+
+.portfolio a:hover {
+    border: 10px var(--highlightColor) solid;
+}
+.portfolio a:hover h3 {
+    background: var(--highlightColor);
 }
 
 /* Contact Me Section Styling */
@@ -230,6 +231,8 @@ footer {
     height: 70px;
     background-color: var(--primaryColor);
     display: flex;
+    justify-content: center;
+    align-items: center;
     border-top: 10px var(--secondaryColor) solid;
     color: white;
 }
@@ -245,11 +248,15 @@ footer {
       justify-content: space-evenly;
       height: 160px;
     }
-    nav {
-        flex-direction: row;
+    header nav {
+        display: flex;
         text-align: center;
         width: 100%;
         margin: 0;
+    }
+
+    header ul {
+        width: 100%;
     }
     header img {
         display: none;
@@ -267,6 +274,9 @@ footer {
     .content {
         width: 100%;
         flex-direction: column;
+    }
+    .portfolioItem {
+        width: 85%;
     }
     embed {
         height: 70vh;
